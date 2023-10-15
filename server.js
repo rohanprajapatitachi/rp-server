@@ -11,7 +11,7 @@ const app = express()  // express started
 */
 
 // Connect to database
-mongoose.connect("", {
+mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
