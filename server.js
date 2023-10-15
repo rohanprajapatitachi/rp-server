@@ -9,7 +9,11 @@ const app = express()  // express started
 */
 
 app.get('/',function (req, res) {   
-    res.send('Hello World')
+    res.send('Hello World');
+})
+
+app.get('/healthservice', function (req, res){
+    res.send(" This is HealthService Portal ");
 })
 
 app.listen(3000, ()=> {
