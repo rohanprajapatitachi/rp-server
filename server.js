@@ -15,7 +15,7 @@ mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
-    .then(() => console.log('DB Connection Successfull!'))
+    .then(() => console.log("DB Connection Successfull!"))
     .catch((err) => {
         console.log("DB Connection Error :", err);
     });
