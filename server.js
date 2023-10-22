@@ -1,7 +1,11 @@
 const express = require('express') // This is the first step to create server import or require express.
 const mongoose = require('mongoose')
-
+const bodyParser = require('body-parser');
 const app = express()  // express started
+const todoRoutes = require =('./routes/user.js');
+
+
+app.use(bodyParser.json());
 
 /*
     / bhaneko root ho banesii main file run hunxa yo path maa
