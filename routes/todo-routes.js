@@ -1,10 +1,16 @@
-// routes/todo-routes.js
-
 const express = require('express');
-const router = expess.Router();
+const todoRouter = express.Router(); // Router bhaneko sub route ho haii like yo kasaiko under maa xa
 
-const todoController = require('../controllers/todo-controller.js');
+todoRouter.get('/read', function (req, res, next) {
+    res.send(" I am in the routes folder ");
+});
 
-router.get('/todos', todo-controller.getAllTodos);
+todoRouter.get('/create', function (req, res, next) {
+    res.send(" I am to create todo ");
+});
 
-module.exports = router;
+todoRouter.get('/delete', function (req, res, next) {
+    res.send(" I am to delete todo ");
+});
+
+module.exports = todoRouter

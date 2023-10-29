@@ -2,10 +2,12 @@ const express = require('express') // This is the first step to create server im
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const app = express()  // express started
-const todoRoutes = require =('./routes/user.js');
+const todoRoutes = require('./routes/todo-routes');
+
 
 
 app.use(bodyParser.json());
+app.use("/todos", todoRoutes);
 
 /*
     / bhaneko root ho banesii main file run hunxa yo path maa
@@ -33,7 +35,7 @@ app.get('/healthservice', function (req, res){
     res.send(" This is HealthService Portal ");
 })
 
+
 app.listen(3000, ()=> {
     console.log("Server started sucessfully")
-    console.log("localhost:3000/")
 })
