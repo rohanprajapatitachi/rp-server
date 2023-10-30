@@ -1,12 +1,10 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 import { Schema } from "mongoose";
 
 const todoSchema = new Schema {(
   title: "String",
   author: "String",
-  body: "String",
-  comments: [{ body: String, date: Date }],
-  date: {type: Date, default: Date.now }
+  content: "String",
 )};
 
 const Todo = mongoose.model('Todo',todoSchema);

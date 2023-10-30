@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const app = express()  // express started
 const todoRoutes = require('./routes/todo-routes');
+const userRoutes = require('./routes/user-routes')
 
 
 
 app.use(bodyParser.json());
 app.use("/todos", todoRoutes);
+app.use("/users", userRoutes);
 
 /*
     / bhaneko root ho banesii main file run hunxa yo path maa
@@ -17,7 +19,7 @@ app.use("/todos", todoRoutes);
 */
 
 // Connect to database
-mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/rp-server?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
@@ -27,11 +29,7 @@ mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg
     });
 
 
-app.get('/',function (req, res) {   
-    res.send('Hello World');
-})
-
-app.get('/healthservice', function (req, res){
+app.get('/healthcheck', function (req, res){
     res.send(" This is HealthService Portal ");
 })
 
