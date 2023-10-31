@@ -19,7 +19,7 @@ app.use("/users", userRoutes);
 */
 
 // Connect to database
-mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/rp-server?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
