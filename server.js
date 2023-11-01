@@ -19,10 +19,7 @@ app.use("/users", userRoutes);
 */
 
 // Connect to database
-mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
+mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority")
     .then(() => console.log("DB Connection Successfull!"))
     .catch((err) => {
         console.log("DB Connection Error :", err);
