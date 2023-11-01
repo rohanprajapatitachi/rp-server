@@ -18,3 +18,13 @@ exports.registerUser = async (req, res) => {
   };
 
 
+exports.getAllUser = async (req, res) => {
+  try {
+    const allUserData = await User.find();
+    console.log("allUserData ~~~~~>", allUserData);
+    res.status(200).send(allUserData);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error);
+  }
+}

@@ -4,9 +4,8 @@ const userController = require('../controllers/user-controller');
 
 userRouter.post('/register', userController.registerUser);
 
-// userRouter.get('/getalluser', function (req, res, next) {
-//     res.send(" I am in the routes folder ");
-// });
+userRouter.get('/getallusers', userController.getAllUser);
+
 // userRouter.get('/deleteuser', function (req, res, next) {
 //     res.send(" I am to create todo ");
 // });
