@@ -28,3 +28,26 @@ exports.getAllUser = async (req, res) => {
     res.status(400).send(error);
   }
 }
+
+exports.updateUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const payload = req.body;
+    const updateUserData = await User.findByIdAndUpdate(userId,payload, {new: true});
+    res.status(200).send(updateUserData);
+  }catch(error){
+    console.error(error);
+    res.status(400).send(error);
+  }
+}
+
+exports.deleteUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const deleteUserData = await User.findByIdAndDelete(userId);
+    res.status(200).send(deleteUserData);
+  }catch (error) {
+    console.error(error);
+    res.status(400).send(error);
+  }
+}
