@@ -4,14 +4,10 @@ const userController = require('../controllers/user-controller');
 
 userRouter.post('/register', userController.registerUser);
 
-userRouter.get('/getallusers', userController.getAllUser);
+userRouter.get('/get-all-users', userController.getAllUser);
 
-// userRouter.get('/deleteuser', function (req, res, next) {
-//     res.send(" I am to create todo ");
-// });
+userRouter.put('/update-user', userController.updateUser);
 
-// userRouter.get('/updateuser', function (req, res, next) {
-//     res.send(" I am to delete todo ");
-// });
+userRouter.delete('/delete-user', userController.deleteUser);
 
 module.exports = userRouter
