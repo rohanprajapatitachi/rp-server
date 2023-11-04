@@ -5,14 +5,13 @@ const todoSchema = new Schema({
   title: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
   author: {
-    type: String,
-    required: true,
+    type: String
   },
   content: {
-    type: String,
+    type: String
   },
 });
 
