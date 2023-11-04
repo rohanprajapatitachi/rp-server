@@ -1,12 +1,13 @@
 const express = require('express') // This is the first step to create server import or require express.
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express()  // express started
 const todoRoutes = require('./routes/todo-routes');
 const userRoutes = require('./routes/user-routes')
 
 
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use("/todos", todoRoutes);
 app.use("/users", userRoutes);
