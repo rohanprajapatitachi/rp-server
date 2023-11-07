@@ -41,3 +41,16 @@ exports.createTodo = async (req, res) => {
       
     }
   };
+
+  exports.deleteTodo = async(req, res) => {
+    try {
+      const userId = req.params.id;
+      const deleteTodoData = await Todo.findByIdAndDelete(userId);
+      res.status(200).send(deleteTodoData);
+    } catch (error){ 
+    console.error(error)
+      res.status(400).send(error);
+      
+    }
+
+  };
