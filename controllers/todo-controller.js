@@ -49,6 +49,16 @@ exports.deleteTodo = async (req, res) => {
   } catch (error) {
     console.error(error)
     res.status(400).send(error);
-
   }
+};
+
+  exports.getSingleTodo = async (req, res) => {
+    try {
+      const singleTodoData = await Todo.findById(req.params.id);
+      res.status(200).send(singleTodoData);
+      console.log(singleTodoData, "singleTodoData")
+    } catch (error) {
+      console.error(error);
+      res.status(400).send(error);
+    }
 };
