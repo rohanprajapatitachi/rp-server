@@ -19,7 +19,7 @@ app.use("/users", userRoutes);
     
 */
 
-// Connect to database
+// Connect to database..
 mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority")
     .then(() => console.log("DB Connection Successfull!"))
     .catch((err) => {
