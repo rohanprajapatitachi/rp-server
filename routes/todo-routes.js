@@ -6,4 +6,5 @@ todoRouter.post('/createtodo', todoController.createTodo);
 todoRouter.get("/get-all-todos", todoController.getAllTodo);
 todoRouter.put("/update-todo/:id", todoController.updateTodo);
 todoRouter.delete('/delete-todo/:id', todoController.deleteTodo);
+todoRouter.get('/single-todo-by-id/:id', todoController.getSingleTodo);
 module.exports = todoRouter
