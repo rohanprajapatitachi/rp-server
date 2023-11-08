@@ -3,9 +3,9 @@ const Todo = require('../models/todo-model');
 exports.createTodo = async (req, res) => {
   try {
     const todoData = new Todo({
-      title: req.body.apple,
-      author: req.body.ball,
-      content: req.body.cat,
+      title: req.body.title,
+      author: req.body.author,
+      content: req.body.content,
     });
     // Save the user to the database
     await todoData.save();
