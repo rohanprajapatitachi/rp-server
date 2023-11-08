@@ -3,16 +3,13 @@ const { Schema } = mongoose;
 
 const todoSchema = new Schema({
   title: {
-    type: String,
-    required: true,
-    unique: true,
+    type: String
   },
   author: {
-    type: String,
-    required: true,
+    type: String
   },
   content: {
-    type: String,
+    type: String
   },
 });
 
