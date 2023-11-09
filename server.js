@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express') // This is the first step to create server import or require express.
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
@@ -20,7 +21,7 @@ app.use("/users", userRoutes);
 */
 
 // Connect to database..
-mongoose.connect("mongodb+srv://rohanprajapatitachi:12345@rohanprajapati.qev1zdg.mongodb.net/rp-server?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("DB Connection Successfull!"))
     .catch((err) => {
         console.log("DB Connection Error :", err);
@@ -32,6 +33,6 @@ app.get('/healthcheck', function (req, res){
 })
 
 
-app.listen(5000, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log("Server started sucessfully")
 })
