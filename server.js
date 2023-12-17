@@ -14,7 +14,7 @@ app.use("/todos", todoRoutes);
 app.use("/users", userRoutes);
 
 /*
-    / bhaneko root ho banesii main file run hunxa yo path maa
+    / bhaneko root ho banesii main file run hunxa yo path maaa
     req ~~~> request ho  ~~~~> server lai maagxau 
     res ~~~> response ho ~~~~> server return somthing
     
